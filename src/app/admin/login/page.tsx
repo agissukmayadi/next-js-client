@@ -19,7 +19,7 @@ export default function Page() {
         },
       })
       .then((res) => {
-        console.log(res);
+        Cookies.set("token", res.data.data.token);
       })
       .catch((err) => {
         console.log(err.response);

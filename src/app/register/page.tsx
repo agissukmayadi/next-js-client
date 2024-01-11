@@ -21,7 +21,7 @@ export default function Page() {
         },
       })
       .then((response) => {
-        console.log(response);
+        Cookies.set("token", response.data.data.token);
       })
       .catch((error) => {
         console.log(error);
